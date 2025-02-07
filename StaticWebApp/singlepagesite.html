@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <style>
+        /* Yleiset tyylit */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f9f8fc;
+        }
+
+        header {
+            background: #b19cd9;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #a991d4;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 1.5rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: 0;
+        }
+
+        #about {
+            background: #e6d5f3;
+        }
+
+        #services {
+            background: #d4c2f2;
+        }
+
+        #contact {
+            background: #cbb3ef;
+        }
+
+        footer {
+            background: #9b87c9;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Responsiivisuus */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <script>
+        // Smooth scrolling navigointia varten
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tervetuloa</h1>
+        <p>Single Page Website -esimerkki</p>
+    </header>
+
+    <nav>
+        <a href="#about">Tietoa</a>
+        <a href="#services">Palvelut</a>
+        <a href="#contact">Yhteystiedot</a>
+    </nav>
+
+    <section id="about">
+        <h2>Tietoa</h2>
+        <p>Tämä on esimerkki yhden sivun verkkosivustosta. Voit siirtyä eri osioihin navigoinnin kautta.</p>
+    </section>
+
+    <section id="services">
+        <h2>Palvelut</h2>
+        <p>Tarjoamme monipuolisia palveluita, jotka sopivat juuri sinun tarpeisiisi.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Yhteystiedot</h2>
+        <p>Ota meihin yhteyttä sähköpostitse: esimerkki@yritys.fi</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Yrityksesi Nimi. Kaikki oikeudet pidätetään.</p>
+    </footer>
+</body>
+</html>
