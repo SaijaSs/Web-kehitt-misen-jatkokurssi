@@ -1,0 +1,68 @@
+/* Yleiset tyylit */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f9f8fc;
+}
+
+header {
+    background: #b19cd9;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    background: #a991d4;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 1.5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+}
+
+#about {
+    background: #e6d5f3;
+}
+
+#services {
+    background: #d4c2f2;
+}
+
+#contact {
+    background: #cbb3ef;
+}
+
+footer {
+    background: #9b87c9;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
