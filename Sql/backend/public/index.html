@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Käyttäjän tiedot</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        // Funktio käyttäjien tietojen hakemiseen
+        async function getUsers() {
+            const response = await fetch('http://localhost:3000/users');
+            const data = await response.json();
+
+            // Luo taulukon
+            let table = "<table><tr><th>ID</th><th>Nimi</th><th>Sähköposti</th><th>Ikä</th></tr>";
+            
+            // Lisää käyttäjät taulukkoon
+            data.forEach(user => {
+                table += `<tr>
+                            <td>${user.id}</td>
+                            <td>${user.name}</td>
+                            <td>${user.email}</td>
+                            <td>${user.age}</td>
+                          </tr>`;
+            });
+
+            table += "</table>";
+            document.getElementById('users').innerHTML = table;
+        }
+
+        // Funktio käyttäjän tietojen lisäämiseen
+        async function addUser() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+
+            const response = await fetch('http://localhost:3000/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, age })
+            });
+
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('result').innerText = `Uusi käyttäjä luotu: ${JSON.stringify(data)}`;
+        }
+
+        // Funktio käyttäjän tietojen päivittämiseen (osittain tai kokonaan)
+        async function updateUser() {
+            const userId = document.getElementById('userId').value;
+            const name = document.getElementById('updateName').value || undefined;  // Jos ei arvoa, jätetään undefined
+            const email = document.getElementById('updateEmail').value || undefined;
+            const age = document.getElementById('updateAge').value || undefined;
+
+            const dataToUpdate = {};
+            if (name) dataToUpdate.name = name;
+            if (email) dataToUpdate.email = email;
+            if (age) dataToUpdate.age = age;
+
+            if (Object.keys(dataToUpdate).length === 0) {
+                document.getElementById('result').innerText = "Ei päivitettyjä tietoja!";
+                return;
+            }
+
+            const response = await fetch(`http://localhost:3000/users/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataToUpdate)  // Lähetetään vain kentät, joissa on arvoja
+            });
+
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('result').innerText = `Käyttäjän tiedot päivitetty: ${JSON.stringify(data)}`;
+        }
+
+        // Funktio käyttäjän poistamiseen
+        async function deleteUser() {
+            const userId = document.getElementById('deleteUserId').value;
+
+            const response = await fetch(`http://localhost:3000/users/${userId}`, {
+                method: 'DELETE'
+            });
+
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('result').innerText = `Käyttäjä poistettu: ${JSON.stringify(data)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Käyttäjätietojen hallinta</h1>
+
+    <!-- Lomake uuden käyttäjän lisäämiseen -->
+    <h2>Lisää uusi käyttäjä</h2>
+    <form onsubmit="event.preventDefault(); addUser();">
+        <label for="name">Nimi: </label>
+        <input type="text" id="name" required><br>
+        <label for="email">Sähköposti: </label>
+        <input type="email" id="email" required><br>
+        <label for="age">Ikä: </label>
+        <input type="number" id="age" required><br>
+        <button type="submit">Lisää käyttäjä</button>
+    </form>
+
+    <hr>
+
+    <!-- Lomake käyttäjien tietojen hakemiseen -->
+    <h2>Hae kaikki käyttäjät</h2>
+    <button onclick="getUsers()">Hae käyttäjät</button>
+    <div id="users"></div>
+
+    <hr>
+
+    <!-- Lomake käyttäjän tietojen päivittämiseen -->
+    <h2>Päivitä käyttäjän tiedot</h2>
+    <form onsubmit="event.preventDefault(); updateUser();">
+        <label for="userId">Käyttäjän ID: </label>
+        <input type="number" id="userId" required><br>
+        <label for="updateName">Uusi nimi: </label>
+        <input type="text" id="updateName"><br>
+        <label for="updateEmail">Uusi sähköposti (valinnainen): </label>
+        <input type="email" id="updateEmail"><br>
+        <label for="updateAge">Uusi ikä: </label>
+        <input type="number" id="updateAge"><br>
+        <button type="submit">Päivitä käyttäjä</button>
+    </form>
+
+    <hr>
+
+    <!-- Lomake käyttäjän poistamiseen -->
+    <h2>Poista käyttäjä</h2>
+    <form onsubmit="event.preventDefault(); deleteUser();">
+        <label for="deleteUserId">Käyttäjän ID (poistettavan): </label>
+        <input type="number" id="deleteUserId" required><br>
+        <button type="submit">Poista käyttäjä</button>
+    </form>
+
+    <hr>
+
+    <!-- Näyttää tulokset -->
+    <h2>Tulokset</h2>
+    <pre id="result"></pre>
+</body>
+</html>
