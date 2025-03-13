@@ -1,8 +1,13 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 
+const cors = require('cors');  
+
 const app = express();
 const port = 3000;
+
+// Käytetään CORS-tukea
+app.use(cors());  // Tämä mahdollistaa pyyntöjen lähettämisen muista domaineista
 
 // Käytetään JSON-middlewarea POST-datan käsittelyyn
 app.use(express.json());
