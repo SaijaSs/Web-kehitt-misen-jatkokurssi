@@ -2,9 +2,7 @@
 
 ## Nettisivut loppuprojektina Web-kehittämisen jatkokurssilla
 
-Tässä projektissa luon nettisivut hyödyntäen Käyttöliittymät ja käytettävyys -kurssissa mallintamaani sovellusta. Sovellus oli lukupiiri-sovellus, jossa käyttäjät voivat liittyä lukupiiriin, osallistua lukupiirin tapahtumiin sekä keskustella lukupiirissä kirjaan liittyen. Sovelluksessa on lisäksi Omat lukupiirit -sivusto, jonne on koottu lukupiirit, joihin olet liittynyt ja tarkemmin tiedot esim. tapaamisista. 
-
-Tässä projektissa vien sovelluksen sisällön nettisivumuotoiseksi alustaksi. 
+Tässä projektissa luon nettisivut hyödyntäen Käyttöliittymät ja käytettävyys -kurssissa mallintamaani sovellusta. Sovellus oli lukupiiri-sovellus. Tästä sovelluksesta hyödynnän tässä työssä ulkoasua ja osittain ideaa. Luon tässä projektissa keskustelupalsta-nettisivut, joka on tarkoitettu fantasiakirjallisuudesta keskustelemiseen. Käyttäjät voivat kommentoida ja luoda keskusteluja sivustolla. Keskusteluja on mahdollista selata "uusimmat", "suosituimmat" ja "kaikki keskustelut" osioiden avulla.
 
 
 ## Käyttäjäpersoonat
@@ -43,128 +41,63 @@ Tässä projektissa vien sovelluksen sisällön nettisivumuotoiseksi alustaksi.
 ### Käyttötapaukset
 <br>
 
-####  **1. Lukupiirin valinta ja lukupiiriin liittyminen**
+####  **1. Keskusteluun osallistuminen**
 <br>
 
-**Käyttäjä:** Rekisteröitynyt verkkosivun käyttäjä <br>
-**Tavoite:**  Lukupiirin löytäminen <br>
+**Käyttäjä:** Verkkosivuston käyttäjä <br>
+**Tavoite:** Fantasiakirjallisuuteen liittyvään keskusteluun osallistuminen<br>
 **Laukaisija:** Lukuharrastus <br><br>
 **Käyttötapauksen kulku:**
-1. Käyttäjä kirjautuu sisään sivustolle
-2. Käyttäjä selaa sivuston tarjolla olevia lukupiirejä
-3. Käyttäjä klikkaa auki kiinnostavan kirjan
+1. Käyttäjä selaa sivustolla olevia keskusteluja
+2. Käyttäjä valitsee haluamansa keskustelun 
+3. Käyttäjä lukee muiden käyttäjien kommentteja
+4. Käyttäjä kommentoi keskustelupalstalle
 
 <br>
 
-#### **2. Lukupiirin valinta ja lukupiiriin liittyminen** 
+#### **2. Keskustelun aloittaminen** 
 <br>
 
-**Käyttäjä:** Rekisteröitynyt verkkosivun käyttäjä <br>
-**Tavoite:**  Lukupiiriin liittyminen <br>
+**Käyttäjä:** Verkkosivun käyttäjä <br>
+**Tavoite:**  Keskustelun aloittaminen fantasiakirjallisuudesta <br>
 **Laukaisija:** Lukuharrastus <br><br>
 **Käyttötapauksen kulku:**
-1. Käyttäjä kirjautuu sisään sivustolle
-2. Käyttäjä siirtyy liittymissivulle
-3. Käyttäjä valitsee haluamansa lukupiirin
-4. Käyttäjä täyttää lisätietoja kenttään
-5. Käyttäjä vahvistaa tiedot oikeiksi
-6. Käyttäjä klikkaa liity-näppäintä
-7. Käyttäjä saa vahvistuksen liittymisestä lukupiiriin
+1. Käyttäjä siirtyy tekemään uuden keskustelun
+2. Käyttäjä kirjoittaa keskustelun aiheen
+3. Käyttäjä kirjoittaa keskusteluun ensimmäisen kommentin
+4. Käyttäjä julkaisee uuden keskustelun
 
 <br>
-
-####  **3.Osallistuminen lukupiirin keskusteluun**
-<br>
-
-**Käyttäjä:** Rekisteröitynyt verkkosivun käyttäjä <br>
-**Tavoite:** Osallistuminen lukupiirin keskusteluun sivustolla <br>
-**Laukaisija:** Lukuharrastus <br><br>
-**Käyttötapauksen kulku:**
-1. Käyttäjä kirjautuu sisään sivustolle
-2. Käyttäjä siirtyy Keskustelut -sivustolle
-3. Käyttäjä avaa haluamansa keskustelun
-4. Käyttäjä kirjoittaa kommentin
-5. Käyttäjä lähettää kommentin keskustelupalstalle 
-
-<br>
-
-####  **4.Osallistuminen lukupiirin tapahtumiin**
-<br>
-
-**Käyttäjä:** Rekisteröitynyt verkkosivun käyttäjä <br>
-**Tavoite:** Osallistuminen lukupiirin tapahtumiin sivustolla <br>
-**Laukaisija:** Lukuharrastus <br><br>
-**Käyttötapauksen kulku:**
-1. Käyttäjä kirjautuu sisään sivustolle
-2. Käyttäjä siirtyy Omat lukupiirit -osioon
-3. Käyttäjä avaa kalenterista tulevan tapahtuman, josta siirtyy lukupiirin sivulle
-4. Käyttäjä löytää osallistumislinkin sivulta ja klikkaa sitä
-5. Käyttäjä osallistuu lukupiirin tapahtumaan 
-
-<br>
-
-
-<br><br>
 
 ### Käyttötilanteet
 
 <br>
 
-#### LUKUPIIRIN ETSIMINEN
+#### OSALLISTUMINEN KESKUSTELUUN KOMMENTOIMALLA
 
-**User story:** "Lumouksen lukijat -sivuston rekisteröityneenä käyttäjänä haluan, että pystyn selaamaan sivustolla käynnissä olevia lukupiirejä, jotta saan niistä tietoa ja voin liittyä haluamiini lukupiireihin."
+**User story:** "Lumouksen lukijat -sivuston käyttäjänä haluan, että pystyn selaamaan sivustolla olevia keskusteluja ja kommentoimaan niitä, jotta voin osallistua käytyyn keskusteluun."
 <br>
 
 **Acceptance criteria:** 
-- Käyttäjä pääsee kirjautumaan sivustolle
-- Käyttäjä näkee käynnissä olevat lukupiirit sivustolla ja voi selata niitä
-- Käyttäjä voi lukea lisätietoa kustakin lukupiiristä
+- Käyttäjä pääsee sivustolle
+- Käyttäjä näkee aloitetut keskustelut sivustolla ja voi selata niitä
+- Käyttäjä näkee muiden käyttäjien kommentit
+- Käyttäjä voi komentoida keskusteluihin
+- Sivusto tallentaa kommentin oikeaan keskusteluun ja oikeaan järjestykseen
 <br><br>
 
-#### LUKUPIIRIIN LIITTYMINEN
+#### KESKUSTELUN ALOITTAMINEN
 
-**User story:** "Lumouksen lukijat -sivuston rekisteröityneenä käyttäjänä haluan, että pystyn liittymään minua kiinnostavaan lukupiiriin, jotta voin osallistua lukupiirin toimintaan."
+**User story:** "Lumouksen lukijat -sivuston käyttäjänä haluan, että pystyn aloittamaan keskusteluja minua kiinnostavista aiheista fantasiakirjallisuuteen liittyen, jotta voin jakaa kokemuksiani muiden kanssa."
 <br>
 
 **Acceptance criteria:** 
-- Käyttäjä pääsee kirjautumaan sivustolle
-- Käyttäjä näkee liittymissivuston
-- Sivusto tarjoaa käynnissä olevat lukupiirit alasvetovalikkoon
-- Käyttäjä voi valita käynnissä olevan lukupiirin alasvetovalikosta
-- Käyttäjä voi kirjoittaa lisätiedot kenttään lisätietoa
-- Käyttäjä voi täpätä vahvista-näppäimen ja klikata "liity"-nappia
-- Sivusto vastaanottaa liittymisen ja lähettää käyttäjälle vahvistusilmoituksen
-- Käyttäjä näkee vahvistusilmoituksen
+- Käyttäjä pääsee sivustolle
+- Käyttäjä näkee aloita keskustelu -osion
+- Käyttäjä voi valita keskustelulle aiheen ja lisätä ensimmäisen kommentin
+- Käyttäjä voi lisätä keskustelun keskustelupalstalle
+- Sivusto tallentaa uuden keskustelun ja asettaa sen sivustolle näkyville 
 <br><br>
-
-#### KESKUSTELUUN OSALLISTUMINEN SIVUSTOLLA
-
-**User story:** "Lumouksen lukijat -sivuston rekisteröityneenä käyttäjänä haluan, että pystyn osallistumaan keskusteluun lukupiirin kirjaan liittyen, jotta voin jakaa mielipiteeni luettavasta kirjasta."
-<br>
-
-**Acceptance criteria:** 
-- Käyttäjä pääsee kirjautumaan sivustolle
-- Käyttäjä näkee lukupiiriensä keskustelupalstat
-- Käyttäjä näkee keskustelupalstan sisällön 
-- Käyttäjä voi kirjoittaa kommentin ja lähettää sen
-- Sivusto tallentaa käyttäjän kommentin ja näytttää sen muille käyttäjille
-<br><br>
-
-#### LUKUPIIRIN TAPAHTUMAAN OSALLISTUMINEN SIVUSTOLLA
-
-**User story:** "Lumouksen lukijat -sivuston rekisteröityneenä käyttäjänä haluan, että pystyn osallistumaan lukupiirin tapahtumiin sivustolla, jotta pystyn jakamaan mielipiteitäni luettavasta kirjasta."
-<br>
-
-**Acceptance criteria:** 
-- Käyttäjä pääsee kirjautumaan sivustolle
-- Käyttäjä näkee lukupiirit, joihin on osallistunut
-- Käyttäjä näkee lukupiirin tapahtumat kalenterissaan
-- Käyttäjä näkee linkin tapahtumaan
-- Käyttäjä voi klikata linkkiä ja osallistua tapahtumaan
-- Sivusto tarjoaa tapahtumat käyttäjän kalenteriin
-<br><br>
-
-
 
 ## Käyttöliittymän prototyyppi
 
@@ -172,6 +105,87 @@ Käyttöliittymän prototyypin olen mallintanut Figmassa hyödyntäen osin Käyt
 
 
 ## Tietoarkkitehtuuri ja tekninen suunnittelu
+
+### Tietoarkkitehtuuri 
+
+**Keskeiset tietomallit ja tietokanta** <br>
+Sivuston tietokantana toimii SQLite-pohjainen relaatiotietokanta. SQLite valikoitui tietokannan pohjaksi, sillä se sopii pienen mittakaavan projekteihin. 
+
+ChatGPT:n kanssa käydyn keskustelun perusteella esittelen tietomalleja ja tietokantaa ER (Entity-Relationship) -kaaavioiden avulla seuraavasti:
+
+ENTITEETI JA RELAATIOT 
+
+![Entiteetit ja relaatiot](./kuvat/ER.png)
+
+Selitys relaatioille:<br>
+Threads (Keskustelut)
+- Tallentaa keskustelut (otsikko, luontiaika).
+- Jokainen keskustelu voi sisältää useita kommentteja.
+
+Comments (Kommentit)
+- Tallentaa anonyymien käyttäjien kommentit.
+- Jokainen kommentti liittyy tiettyyn keskusteluun (thread_id FK).
+- guest_name tallennetaan anonyymille kommentoijalle.
+
+Views (Näyttökerrat)
+- Tallentaa keskustelujen katselumäärät.
+- Jokainen näyttökerta liittyy tiettyyn keskusteluun (thread_id FK).
+- Tämä mahdollistaa keskustelujen järjestämisen uusimmat ja suosituimmat -osioihin.
+<br>
+
+SQL-MALLIT: 
+
+Alla on tietokannan rakenteen SQL-mallit, jotka määrittävät keskustelupalstan keskeiset tietorakenteet. 
+
+![SQL-mallit](./kuvat/sql.png)
+
+Taulujen selitykset:<br>
+Threads (Keskustelut)
+- Tallentaa keskustelut, joita käyttäjät aloittavat.
+- thread_id: Automaattisesti kasvava yksilöllinen tunniste jokaiselle keskustelulle.
+- title: Keskustelun otsikko.
+- created_at: Keskustelun luomisaika, tallentuu automaattisesti.
+
+Comments (Kommentit)
+- Tallentaa keskusteluihin lisätyt kommentit.
+- comment_id: Automaattisesti kasvava yksilöllinen tunniste jokaiselle kommentille.
+- thread_id: Viittaa keskusteluun, johon kommentti kuuluu.
+- guest_name: Käyttäjän itse antama nimimerkki.
+- content: Kommentin sisältö.
+- created_at: Kommentin luomisaika, tallentuu automaattisesti.
+- FOREIGN KEY (thread_id): Jos keskustelu poistetaan, siihen liittyvät kommentit poistuvat myös.
+
+Views (Näyttökerrat)
+- Tallentaa, milloin keskusteluja katsotaan.
+- view_id: Automaattisesti kasvava yksilöllinen tunniste jokaiselle katselukerralle.
+- thread_id: Viittaa keskusteluun, jota katsottiin.
+- view_time: Tallentaa katseluhetken automaattisesti.
+- FOREIGN KEY (thread_id): Yhteys keskustelutauluun.
+
+Tietokantakyselyjen selitykset:
+
+Kaikki keskustelut: Näyttää kaikki keskustelut uusimmasta vanhimpaan.
+
+Uusimmat keskustelut: Listaa 10 uusinta keskustelua.
+
+Suosituimmat keskustelut: Näyttää keskustelut, joissa on eniten kommentteja, järjestettynä suosion mukaan.
+
+### Tekninen suunnittelu
+
+**Front-endin** toteutuksessa käytän projektissani seuraavia teknologioita: 
+- HTML/CSS
+- JavaScript
+- React
+- Bootstrap (mahdollisesti)
+
+**Back-endin** toteutuksessa käytän projektissani seuraavia teknologioita:
+- Node.js + Express
+
+**Tietokannan** toteutuksessa käytän projektissani seuraavia teknologioita:
+- SQLite
+
+**Isännoinnin** toteutuksessa käytän projektissani seuraavia teknologioita:
+- Azure App Service
 
 ## Projektinhallinta ja käyttäjätestaus
 
