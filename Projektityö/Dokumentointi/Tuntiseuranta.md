@@ -14,4 +14,4 @@ Used time: 12 h 15 min
 **VAIHE 2**
 | Date   | Used time | Subject                | Outcome |
 |:--------|:-----------:|:------------------------:|---------:|
-
+|1.4.25| 15 min | Dokumentoinnin luominen, ohjeisiin perehtyminen | Vaihe 2-dokumentti luotu |
