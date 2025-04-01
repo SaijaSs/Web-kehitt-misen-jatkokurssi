@@ -4,6 +4,8 @@
 
 Tässä projektissa luon nettisivut hyödyntäen Käyttöliittymät ja käytettävyys -kurssissa mallintamaani sovellusta. Sovellus oli lukupiiri-sovellus. Tästä sovelluksesta hyödynnän tässä työssä ulkoasua ja osittain ideaa. Luon tässä projektissa keskustelupalsta-nettisivut, joka on tarkoitettu fantasiakirjallisuudesta keskustelemiseen. Käyttäjät voivat kommentoida ja luoda keskusteluja sivustolla. Keskusteluja on mahdollista selata "uusimmat", "suosituimmat" ja "kaikki keskustelut" osioiden avulla.
 
+Projektintyöhön kuuluen, tämä suunnitelma voi muuttua projektin edetessä, mikäli muutokset tarpeen jonkin osa-alueen osalta. 
+
 
 ## Käyttäjäpersoonat
 
@@ -32,14 +34,11 @@ Tässä projektissa luon nettisivut hyödyntäen Käyttöliittymät ja käytett�
 
 ![Tomi](./kuvat/Tomi.png)
 
-
-
-
 ## Käyttötapaukset ja -tilanteet
 
 
 ### Käyttötapaukset
-<br>
+
 
 ####  **1. Keskusteluun osallistuminen**
 <br>
@@ -71,8 +70,6 @@ Tässä projektissa luon nettisivut hyödyntäen Käyttöliittymät ja käytett�
 
 ### Käyttötilanteet
 
-<br>
-
 #### OSALLISTUMINEN KESKUSTELUUN KOMMENTOIMALLA
 
 **User story:** "Lumouksen lukijat -sivuston käyttäjänä haluan, että pystyn selaamaan sivustolla olevia keskusteluja ja kommentoimaan niitä, jotta voin osallistua käytyyn keskusteluun."
@@ -102,6 +99,8 @@ Tässä projektissa luon nettisivut hyödyntäen Käyttöliittymät ja käytett�
 ## Käyttöliittymän prototyyppi
 
 Käyttöliittymän prototyypin olen mallintanut Figmassa hyödyntäen osin Käyttöliittymät ja käytettävyys -kurssille mallintamaani protoa. Tässä linkki Lumouksen lukijoiden sivuston protoon: 
+
+https://www.figma.com/proto/kbhPlCEbCQhmUgvMvTKp0X/Keskustelu?node-id=1-52&p=f&t=1O75mPhXxCazCOS8-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A52
 
 
 ## Tietoarkkitehtuuri ja tekninen suunnittelu
@@ -161,14 +160,12 @@ Views (Näyttökerrat)
 - thread_id: Viittaa keskusteluun, jota katsottiin.
 - view_time: Tallentaa katseluhetken automaattisesti.
 - FOREIGN KEY (thread_id): Yhteys keskustelutauluun.
+<br>
 
 Tietokantakyselyjen selitykset:
-
-Kaikki keskustelut: Näyttää kaikki keskustelut uusimmasta vanhimpaan.
-
-Uusimmat keskustelut: Listaa 10 uusinta keskustelua.
-
-Suosituimmat keskustelut: Näyttää keskustelut, joissa on eniten kommentteja, järjestettynä suosion mukaan.
+-       Kaikki keskustelut: Näyttää kaikki keskustelut uusimmasta vanhimpaan.
+-       Uusimmat keskustelut: Listaa 10 uusinta keskustelua.
+-       Suosituimmat keskustelut: Näyttää keskustelut, joissa on eniten kommentteja, järjestettynä suosion mukaan.
 
 ### Tekninen suunnittelu
 
@@ -187,5 +184,111 @@ Suosituimmat keskustelut: Näyttää keskustelut, joissa on eniten kommentteja, 
 **Isännoinnin** toteutuksessa käytän projektissani seuraavia teknologioita:
 - Azure App Service
 
-## Projektinhallinta ja käyttäjätestaus
+## Projektinhallinta ja testaus
+
+### Projektinhallinta
+
+Projektin tavoite: <br> 
+Tavoitteena on luoda fantasiakirjallisuudesta kiinnostuneille käyttäjille keskustelupalsta, jonne käyttäjät voivat kommentoida ja aloittaa keskusteluja. Nettisivuilla on mahdollisuus selata avattuja keskusteluja suosituimmat -, uusimmat - ja kaikki -kategorioiden mukaan. Kesksutelupalstan tarkoitus on tarjota alusta fantasiakirjallisuusharrastajille, jossa voi jakaa tietoa, mielipiteitä ja ajatuksia kirjallisuudesta. 
+
+Projektin rajaus: <br>
+Projektissa luodaan toimivat verkkosivut, joissa toimintoina keskustelujen selaus, kommentointi ja keskustelujen avaus. 
+
+Kustannukset: <br>
+Projekti tehdään osana Web-kehittämisen jatkokurssia, jonka opintopistemäärä on 5 op. Projektin osuus kurssista on n. puolet eli 2,5 op eli projektiin varataan n. 68 h työtunteja. Projektin Vaihe 1:een kuluu työtunteja n. 15 % käytettävistä työtunneista. 45 % työtunneista jakautuu projektin Vaihe 2 tekemiseen, projektipajoihin osallistumiseen ja projektin esittelyyn. Kustannuksia projektissa voi muodostua Azure App Service:n käytöstä, arviolta alle 10 e. 
+
+Riskianalyysi: <br>
+
+Tapahtuman todennäköisyys
+1. Epätodennäköinen
+2. Mahdollinen
+3. Todennäköinen
+
+Seurausten vakavuus: 
+1. Vähäiset
+2. Haitalliset
+3. Vakavat
+
+
+|Nimi| Kuvaus| Todennäköisyys | Vaikutus |
+|---|---|---|---|
+|Sairastuminen |Projektin tekijän merkittävä sairastuminen | 1 | 3 |
+|Resurssien puute | Tarvittavia resursseja ei ole | 2 | 2 |
+|Tekninen häiriö | Esiintyy tekninen häiriö | 3 | 1 |
+|Viivästyminen | Projektin valmistuminen viivästyy | 2 | 1 |
+<br>
+
+Laadunhallinta: <br>
+Projektissa laadunhallintaa toteutetaan tarkastelemalla sivustolle asetettuja vaatimuksia ja ominaisuuksia niiden tärkeysasteen mukaan. Projektin laadunhallinnassa oleellisessa osassa on myös opettajanohjaus projektin eri vaiheissa. Laadunhallintaa tukee hyvin suunniteltu ja toteutettu käyttäjätestaus (lue alta Käyttäjä- ja sovellustestaus). 
+
+Muutosten hallinta: <br>
+Projektissa versionhallinta toteutetaan GitHub:n avulla, jonne tallennetaan verisopäivityksiä projektin eri vaiheissa. Muutosten tarvetta verkkosivuille kartoitetaan opettajan ohjauksessa palautteen muodossa tai työpajoissa. Projektin toteutumista dokumentoidaan alusta loppuun sekä seurataan käytettyä työmäärää. 
+
+### Käyttäjätestaus ja sovellustestaus 
+
+Projektin aikana testausta tapahtuu jatkuvana osana prosessia, kun kokeillaan eri vaihdeiden toimivuus nettisivuilla. Tämä siis tapahtuu manuaalisena testauksena projektin aikana projektin tekijän toimesta. 
+
+**Käyttäjätestaussuunintelma:**
+
+Moderoitu käytettävyystesti - Face-to-Face
+
+Tavoite: Testissä tutkitaan sitä, onnistuuko käyttäjä tekemään alla listatut toiminnot annetun ohjeistuksen jälkeen. 
+
+Toiminnot:
+- kommentointi
+- keskustelun aloittaminen
+- suosittujen keskustelujen selaaminen
+- uusimpien keskustelujen selaaminen
+- kaikkien keskustelujen selaaminen
+
+Ohejeistus: "Tässä on suunnittelemani nettisivut Lumouksen lukijat. Tämä on keskustelupalsta, jossa fantasiakirjallisuuden harrastajat voivat keskustella. Voit lisätä kommentteja, aloittaa keskusteluja sekä selata keskusteluja. Tutki nettisivuja vapaasti."
+
+Testitilanne: Testattavalle annetaan ohjeistus. Testaaja seuraa testattavan toimintaa havainnoimalla ja tekee muistiinpanoja. Lopuksi testaaja kysyy loppuhaastattelukysymykset.
+
+Loppukysymykset:
+- Löysitkö toiminnallisuudet helposti?
+- Mikä toimi sinusta hyvin?
+- Onko kehittämisehdotuksia?
+
+**Sovellustestaussuunnitelma:** <br>
+
+1. Yksikkötestaus (Unit testing)
+
+Tavoite: Yksikkötestauksen tavoitteena on varmistaa, että sovelluksen pienimmät yksiköt, kuten funktiot ja komponentit, toimivat oikein erillään muista osista. <br>
+
+Testattavat osat:
+-  Apufunktiot (utility functions)
+-       Esim. suosituimpien keskustelujen laskenta
+- React-komponentit
+-       Keskustelulistan ja kommenttien renderöityminen
+-       Käyttöliittymän interaktiot (napit, lomakkeet)
+
+- API-kutsut ja tietojen käsittely
+-       JSON-datan muokkaus ja käsittely ennen näyttämistä
+
+Teknologiat:
+- Testikirjasto: Jest / Vitest (jos käytössä Vite)
+- React-komponenttien testaukseen: React Testing Library
+
+2. End-to-End (E2E) -testaus
+
+Tavoite: E2E-testauksen tavoitteena on varmistaa, että sovellus toimii kokonaisuutena käyttäjän näkökulmasta. <br>
+
+Testattavat käyttötapaukset:
+- Käyttäjä voi luoda uuden keskustelun
+- Käyttäjä voi selata keskusteluja
+- Käyttäjä voi lisätä kommentin keskusteluun
+
+Teknologiat
+
+- Testikirjasto: Playwright
+- Selain: Chromium (tai muu Playwrightin tukema selain)
+
+
+
+
+
+
+
+
 
