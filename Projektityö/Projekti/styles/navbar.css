@@ -1,0 +1,65 @@
+/* Navbar tyylit */
+header {
+    background-color: #FEFBFB;
+    border-bottom: 2px solid #e1e1e1;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.nav-menu {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin: 0 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-menu a:hover {
+    color: #b74f5b;
+}
+
+.profile-link, .hamburger-menu {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.profile-link img, .hamburger-menu img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-menu a:hover img {
+    opacity: 0.7;
+}

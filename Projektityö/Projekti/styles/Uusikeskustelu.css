@@ -1,0 +1,11 @@
+/* Uusikeskustelu komponentin tyylit */
+.new-discussion-container {
+    margin-top: 20px;
+}
+
+.new-discussion-button {
+    background-color: #b74f5b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}

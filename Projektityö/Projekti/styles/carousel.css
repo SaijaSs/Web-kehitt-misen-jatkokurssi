@@ -1,0 +1,28 @@
+/* Karusellin tyylit */
+.carousel-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    flex: 0 0 33%;
+    height: 33vh;
+    margin: 0 10px;
+    max-width: 320px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: white;
+    border-radius: 50%;
+}

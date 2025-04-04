@@ -1,0 +1,77 @@
+/* Yleiset tyylit */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FEFBFB;
+}
+
+h1, h2 {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-section {
+  background-color: #E9BC88; /* Ruskea tausta */
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff; /* Teksti valkoinen */
+}
+
+.about-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: #f0d3b0; /* Vaaleampi teksti ruskealle taustalle */
+}
+
+.about-section .btn {
+  background-color: #b74f5b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.about-section .btn:hover {
+  background-color: #9b4048;
+}
+
+/* Karusellin nuolien hover-efekti */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Pääsisällön tyylit */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 40px;
+}
+
+/* Raahattavan palkin tyylit */
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0e0;
+  position: relative;
+  margin-top: 20px;
+}
+
+.draggable-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background-color: #8D2A24;
+  cursor: pointer;
+  transition: width 0.5s ease;
+}
