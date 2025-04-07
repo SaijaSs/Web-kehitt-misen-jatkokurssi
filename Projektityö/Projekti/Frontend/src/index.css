@@ -19,6 +19,14 @@ body {
   background-color: #FEFBFB;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column; /* Varmistaa, että osiot asettuvat päällekkäin */
+  padding: 20px;
+  gap: 40px; /* Lisää tilaa osioiden väliin */
+}
+
+
 
 .btn {
   background-color: #8D2A24; /* Painikkeen taustaväri */

@@ -1,0 +1,75 @@
+/* Kirjaosio ja sen otsikko */
+.book-section {
+    margin-bottom: 30px;
+}
+
+/* Otsikko vasempaan laitaan */
+.book-section h2 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    color: #0B0302;
+}
+
+/* Karuselli (kirjakortit yhdellä rivillä) */
+.book-carousel {
+    display: flex;
+    overflow-x: auto; /* Sallii vaakasuuntaisen vierityksen */
+    gap: 20px; /* Lisää väliä korttien väliin */
+    padding: 10px 0; /* Lisää vähän tilaa ylös ja alas */
+}
+
+/* Kirjakortin tyyli */
+.book-card {
+    min-width: 30%; /* Kortin minimileveys on 30% (kolme korttia mahtuu näytölle) */
+    flex-shrink: 0; /* Ei kutistu */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Lisätty animaatio efektin luomiseksi */
+}
+
+/* Kirjakortin hover-efekti (kortti hieman nousee, kun sitä hoveroidaan) */
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Kirjan nimi */
+.book-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color:#0B0302;
+}
+
+/* Tiedot */
+.book-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Karusellin vierityksen ulkoasu */
+.book-carousel::-webkit-scrollbar {
+    height: 8px; /* Pystysuora vierityspalkki */
+}
+
+.book-carousel::-webkit-scrollbar-thumb {
+    background-color: #b74f5b;
+    border-radius: 10px;
+}
+
+.book-carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+.section-icon {
+    width: 40px; /* Kuvan leveys */
+    height: 40px; /* Kuvan korkeus */
+    margin-right: 10px; /* Väli otsikon ja kuvan väliin */
+    vertical-align: text-bottom; 
+}

@@ -49,3 +49,31 @@ header h1 {
 .nav-menu a:hover {
     color: #b74f5b; /* Muuttaa värin hover-tilassa punaiseksi */
 }
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 80px; /* Säädä tarpeen mukaan headerin alle */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.dropdown-menu a:hover {
+    color: #b74f5b;
+}
+
+

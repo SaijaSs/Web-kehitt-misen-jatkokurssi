@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    align-items: flex-start; /* Varmistaa, että kuva ja teksti ovat vertikaalisesti keskitettyjä */
+    padding: 20px; /* Lisää hieman väliä ympärille */
+}
+
+.kuva {
+    margin-right: 20px; /* Lisää väli kuvaan ja teksteihin */
+}
+
+.kuva img {
+    width: 600px; /* Kuvan koko */
+    height: auto;
+}
+
+footer h2 {
+    font-family: 'Tenor Sans', sans-serif; 
+    color: #333; /* Otsikon väri */
+    display: flex;
+    align-items: center; /* Tekstin ja logon vertikaalinen keskitys */
+    font-size: 24px;
+    margin: 0; /* Poistaa marginaalin, jotta kaikki on tiukasti vierekkäin */
+}
+
+footer p {
+    margin: 5px 0 0 0; /* Pieni väli otsikon ja tekstin väliin */
+    font-size: 16px;
+    color: #555; /* Varmistaa, että teksti on vaaleampi */
+}
+
+
+.section-icon {
+    width: 40px; /* Kuvan leveys */
+    height: 40px; /* Kuvan korkeus */
+    margin-right: 10px; /* Väli otsikon ja kuvan väliin */
+    vertical-align: text-bottom; }

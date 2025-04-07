@@ -1,0 +1,19 @@
+.about-section {
+    background-color: #E9BC88; /* Ruskea tausta */
+    padding: 20px;
+    border-radius: 8px;
+    color: #0B0302; 
+    text-align: center;
+}
+
+.about-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Tenor Sans', sans-serif;
+    margin: 0;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #0B0302; 
+}
