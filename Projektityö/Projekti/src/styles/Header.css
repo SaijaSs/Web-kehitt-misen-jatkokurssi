@@ -1,0 +1,51 @@
+header {
+    background-color: #FEFBFB; /* Taustaväri */
+    border-bottom: 2px solid #e1e1e1; /* Alarajaviiva */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Asettaa vasemman ja oikean osan erilleen */
+    align-items: center; /* Keskittää pystysuunnassa */
+}
+
+header img {
+    width: 50px;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Logon koko */
+    margin-right: 10px; /* Väli logon ja otsikon välillä */
+}
+
+header h1 {
+    font-family: 'Tenor Sans', sans-serif; /* Käyttää Tenor Sans -fonttia */
+    font-size: 24px; /* Otsikon fonttikoko */
+    color: #333; /* Otsikon väri */
+    margin: 0; /* Poistaa marginaalit otsikosta */
+}
+
+
+.nav-menu {
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* Varmistaa, että linkit ja ikonit ovat samalla vaakatasolla */
+    gap: 15px;  /* Lisää tilaa linkkien väliin */
+}
+
+/* Headerin linkkien muotoilu */
+.nav-menu a {
+    text-decoration: none; /* Poistaa alleviivauksen */
+    color: #333; /* Asettaa linkin värin normaaliksi harmaaksi */
+    font-size: 18px; /* Asettaa fonttikoon */
+    margin: 0 15px; /* Lisää tilaa linkkien väliin */
+    font-family: 'Inter', sans-serif; /* Käyttää Inter-fonttia */
+}
+
+/* Hover-efekti linkeille */
+.nav-menu a:hover {
+    color: #b74f5b; /* Muuttaa värin hover-tilassa punaiseksi */
+}

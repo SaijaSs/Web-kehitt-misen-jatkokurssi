@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; // React 18
-import './App.css'; // Yleiset tyylit
-import App from './App'; // Pääkomponentti
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
 
-// Renderöi App-komponentin id="root" sisältöön
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <App />
-  </React.StrictMode>
-);
+  </StrictMode>,
+)

@@ -1,0 +1,46 @@
+:root {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #FEFBFB;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FEFBFB;
+}
+
+
+.btn {
+  background-color: #8D2A24; /* Painikkeen taustaväri */
+  color: #FEFBFB; /* Tekstin väri */
+  padding: 8px 16px; /* Tilaa painikkeen ympärille */
+  font-size: 16px; /* Fonttikoko */
+  font-family: 'Inter', sans-serif; /* Käytetään Inter-fonttia */
+  border: none; /* Poistaa oletusreunan */
+  border-radius: 16px; /* Pyöristää reunat */
+  cursor: pointer; /* Muuttaa osoittimen painikkeeksi */
+  width: 156px; /* Leveys */
+  height: 32px; /* Korkeus */
+  text-align: center; /* Keskittää tekstin */
+}
+
+/* Hover-efekti */
+.btn:hover {
+  background-color: #7c211c; /* Tummempi sävy hover-tilassa */
+}
+
+
+
+
+
+
