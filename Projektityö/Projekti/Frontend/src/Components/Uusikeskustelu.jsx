@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Uusikeskustelu.css'
 
 const Uusikeskustelu = () => {
@@ -13,7 +14,10 @@ const Uusikeskustelu = () => {
             <p> Mukavia keskusteluhetkiä kirjallisuuden maailmassa. </p>
 
             {/*Painike, joka vie Lukupiirit-osioon*/}
-            <button className="btn">Uusi keskustelu</button>
+
+            <Link to="/Aloitakeskustelu">
+                <button className="btn">Uusi keskustelu</button>
+            </Link>
         </div>
 
 

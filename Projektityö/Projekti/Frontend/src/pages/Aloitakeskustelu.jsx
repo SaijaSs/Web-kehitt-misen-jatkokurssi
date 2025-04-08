@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../Components/Header';
-import Uusikeskustelu from '../Components/Uusikeskustelu';
-import Karuselli from '../Components/Karuselli';
 import Footer from '../Components/Footer';
+import Aloita from '../Components/Aloita';
 
 
-const Homepage = () => {
+
+const Aloitakeskustelu = () => {
 
 
   return (
@@ -15,9 +15,9 @@ const Homepage = () => {
         <div>
           <Header />
         </div>
+        
+        <div><Aloita /></div>
       
-        <div><Karuselli /></div>
-      <div><Uusikeskustelu /></div>
 
       <div><Footer /></div>
       
@@ -28,4 +28,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage;
+export default Aloitakeskustelu;

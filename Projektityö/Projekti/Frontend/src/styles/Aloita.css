@@ -1,0 +1,103 @@
+/* Aloita.css */
+.aloita-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+    
+}
+
+.form-container {
+    flex: 1; /* Tämä vie kaiken tilan lomakkeelle */
+    background-color: #FEFBFB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0B0302;
+}
+
+.aloitus-lomake {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lomake-kentta {
+    display: flex;
+    flex-direction: column;
+}
+
+.lomake-kentta label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.lomake-kentta input,
+.lomake-kentta textarea {
+    padding: 10px;
+    border: 1px solid #E9BC88;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.lomake-kentta input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: #8D2A24; /* Painikkeen taustaväri */
+    color: #FEFBFB; /* Tekstin väri */
+    padding: 8px 16px; /* Tilaa painikkeen ympärille */
+    font-size: 16px; /* Fonttikoko */
+    font-family: 'Inter', sans-serif; /* Käytetään Inter-fonttia */
+    border: none; /* Poistaa oletusreunan */
+    border-radius: 16px; /* Pyöristää reunat */
+    cursor: pointer; /* Muuttaa osoittimen painikkeeksi */
+    width: 156px; /* Leveys */
+    height: 32px; /* Korkeus */
+    text-align: center; /* Keskittää tekstin */
+}
+
+button[type="submit"]:hover {
+    background-color: #7c211c; /* Tummempi sävy hover-tilassa */
+}
+
+/* Info-laatikko */
+.info-box {
+    flex: 0.4; /* Tämä vie vähemmän tilaa kuin lomake */
+    background-color: #e9bc88;
+    color: #0b0302;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Asetetaan elementit pystysuoraan */
+    justify-content: center; /* Keskitetään pystysuunnassa */
+    align-items: center; /* Keskitetään vaakasuunnassa */
+    text-align: center; /* Varmistetaan, että teksti on keskitetty */
+}
+  
+
+
+/* Info-laatikon otsikko */
+.info-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Info-laatikon teksti */
+.info-box p {
+    font-size: 14px;
+}

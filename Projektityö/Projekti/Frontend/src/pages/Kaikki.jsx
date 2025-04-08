@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../Components/Header';
 import Uusikeskustelu from '../Components/Uusikeskustelu';
-import Karuselli from '../Components/Karuselli';
 import Footer from '../Components/Footer';
+import Kaikkikeskustelut from '../Components/Kaikkikeskustelut';
 
 
-const Homepage = () => {
+const Kaikki = () => {
 
 
   return (
@@ -15,8 +15,8 @@ const Homepage = () => {
         <div>
           <Header />
         </div>
-      
-        <div><Karuselli /></div>
+        <div><Kaikkikeskustelut/></div>
+        
       <div><Uusikeskustelu /></div>
 
       <div><Footer /></div>
@@ -28,4 +28,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage;
+export default Kaikki;
