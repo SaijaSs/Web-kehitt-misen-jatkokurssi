@@ -1,0 +1,86 @@
+.section-icon {
+    width: 40px; /* Kuvan leveys */
+    height: 40px; /* Kuvan korkeus */
+    margin-right: 10px; /* Väli otsikon ja kuvan väliin */
+    vertical-align: text-bottom; 
+}
+
+/* Yleinen rakenne keskustelupalstalle */
+.keskustelupalsta {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Keskustelun otsikko ja info */
+.keskustelupalsta h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.keskustelupalsta p {
+    font-size: 16px;
+    color: #333;
+}
+
+.section-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+/* Kommenttien ulkoasu */
+.kommentit {
+    margin-top: 20px;
+}
+
+.kommentti {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.kommentti-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.kommentti-kayttaja {
+    font-size: 16px;
+}
+
+.kommentti-paivamaara {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Kommentointikenttä */
+.kommentointi {
+    margin-top: 20px;
+}
+
+.kommentti-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 120px;
+}
+
+.nimimerkki-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+

@@ -8,6 +8,7 @@ import Kaikki from './pages/Kaikki';
 import Aloitakeskustelu from './pages/Aloitakeskustelu';
 import Meista from './pages/Meista';
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Kaikki" element={<Kaikki />} /> 
         <Route path="/Aloitakeskustelu" element={<Aloitakeskustelu />} />
         <Route path="/Meista" element={<Meista />} />  
+   
       </Routes>
     </div>
   </Router>

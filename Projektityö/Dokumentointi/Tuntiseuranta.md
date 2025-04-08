@@ -17,4 +17,4 @@ Used time: 12 h 15 min
 |1.4.25| 15 min | Dokumentoinnin luominen, ohjeisiin perehtyminen | Vaihe 2-dokumentti luotu |
 |4.4.25| 3 h|Reactin aloittaminen | luotu komponentteja ja tyylisivuja |
 |7.4.25 | 5 h | Reactin uudelleenaloitus, etusivu | Luotu yleiset muotoilut ja etusivu komponentteineen ja komponenttikohtaiset tyylisivut |
-|8.4.25. | 10.20- |
+|8.4.25. | 4 h 25 min | Sivujen ja tyylien luomista | Suosituimmat, Uusimmat, Aloita keskustelu, Meistä sivut valmiit muotoiluineen| 
