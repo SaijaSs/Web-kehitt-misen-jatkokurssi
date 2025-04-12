@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Keskustelupalsta.css'
 import Icon from '../assets/images/Unicorn.png';
@@ -12,28 +12,35 @@ const keskustelut = [
 
 
 const Kaikkikeskustelut = () => {
+    const [keskustelut, setKeskustelut] = useState([]);
+  
+    // Hae kaikki keskustelut API:sta
+    useEffect(() => {
+      fetch('http://localhost:3000/threads')
+        .then((response) => response.json())
+        .then((data) => setKeskustelut(data))
+        .catch((error) => console.error('Virhe haettaessa keskusteluja:', error));
+    }, []);
+  
+    // Järjestetään keskustelut aikajärjestykseen (uusimmat ensimmäisenä)
+    const sortedKeskustelut = keskustelut.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+  
     return (
-
-        <div className="keskustelupalsta">
-
-            <h2><img src={Icon} alt="Kuvake" className="section-icon" />Kaikki keskustelut</h2>
-
-
-            <div className="keskustelu-container">
-                {keskustelut.map((k) => (
-                    <Link to={`/keskustelu/${k.id}`} className="keskustelu-item" key={k.id}>
-                        <span>{k.otsikko}</span>
-                        <img src={ArrowIcon} alt="Avaa" />
-                    </Link>
-                ))}
-            </div>
-
-
-
-
+      <div className="keskustelupalsta">
+        <h2>
+          <img src={Icon} alt="Kuvake" className="section-icon" />Kaikki keskustelut
+        </h2>
+  
+        <div className="keskustelu-container">
+          {sortedKeskustelut.map((k) => (
+            <Link to={`/keskustelu/${k.id}`} className="keskustelu-item" key={k.id}>
+              <span>{k.title}</span>
+              <img src={ArrowIcon} alt="Avaa" />
+            </Link>
+          ))}
         </div>
-    )
-
-}
+      </div>
+    );
+  };
 
 export default Kaikkikeskustelut;

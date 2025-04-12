@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createThread, addCommentToThread } from '../api/api'; // Tuodaan API-funktiot
 import '../styles/Aloita.css';
 
 const Aloita = () => {
@@ -6,28 +7,37 @@ const Aloita = () => {
     const [aihe, setAihe] = useState('');
     const [kommentti, setKomentti] = useState('');
     const [tarkastettu, setTarkastettu] = useState(false);
+    const [loading, setLoading] = useState(false); // Ladataan tilaa
+    const [error, setError] = useState(null); // Virhetilan hallinta
 
     // Lomakkeen lähetys
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         // Tarkistetaan, että kaikki kentät on täytetty
         if (aihe && kommentti && tarkastettu) {
-            // Tässä voidaan lähettää tiedot tietokantaan
-            console.log('Keskustelu luotu', { aihe, kommentti });
+            setLoading(true); // Asetetaan loading-tila päälle
 
-            // Voit lähettää tiedot API:lle käyttämällä fetchia tai Axiosia
-            // Esimerkiksi:
-            // fetch('YOUR_API_URL', {
-            //   method: 'POST',
-            //   headers: {
-            //     'Content-Type': 'application/json',
-            //   },
-            //   body: JSON.stringify({ aihe, kommentti }),
-            // })
-            // .then(response => response.json())
-            // .then(data => console.log('Data:', data))
-            // .catch(error => console.error('Virhe:', error));
+            try {
+                // Lähetetään uusi keskustelu
+                const newThread = await createThread(aihe, kommentti);
+                console.log('Keskustelu luotu', newThread);
+
+                // Lisätään ensimmäinen kommentti keskusteluun
+                const newComment = await addCommentToThread(newThread.id, kommentti);
+                console.log('Kommentti lisätty', newComment);
+
+                // Tyhjennetään lomake kentät
+                setAihe('');
+                setKomentti('');
+                setTarkastettu(false);
+
+            } catch (error) {
+                console.error('Virhe keskustelua lisättäessä:', error);
+                setError('Tapahtui virhe keskustelua luotaessa. Yritä uudelleen.');
+            } finally {
+                setLoading(false); // Poistetaan loading-tila
+            }
         } else {
             alert('Täytä kaikki kentät ja hyväksy tiedot ennen lähettämistä.');
         }
@@ -51,7 +61,6 @@ const Aloita = () => {
                             required
                         />
                     </div>
-
 
                     {/* Aloituskommentti */}
                     <div className="lomake-kentta">
@@ -78,8 +87,13 @@ const Aloita = () => {
                     </div>
 
                     {/* Aloita keskustelu - Painike */}
-                    <button type="submit" className="btn">Aloita</button>
+                    <button type="submit" className="btn" disabled={loading}>
+                        {loading ? 'Ladataan...' : 'Aloita'}
+                    </button>
                 </form>
+
+                {error && <p className="error-message">{error}</p>} {/* Virheilmoitus */}
+
             </div>
 
             {/* Toinen laatikko vierekkäin */}
@@ -87,9 +101,7 @@ const Aloita = () => {
                 <h3>Muista noudattaa keskustelupalstan sääntöjä! ♥</h3>
                 <p>Mukavia keskusteluhetkiä kirjallisuuden maailmassa.</p>
             </div>
-        </div >
-
-
+        </div>
     );
 };
 

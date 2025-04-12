@@ -1,39 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Keskustelupalsta.css'
 import Icon from '../assets/images/Jewel.png';
 import ArrowIcon from '../assets/images/ArrowIcon.png';
 
-const keskustelut = [
-    { id: 1, otsikko: "Kirjavinkkejä syksyyn" },
-    { id: 2, otsikko: "Mielipiteitä uudesta fantasia-sarjasta?" },
-    { id: 3, otsikko: "Suosikkikirjasi lapsuudesta" },
-];
-
-
 const Suositkeskustelu = () => {
+    const [suositut, setSuositut] = useState([]);
+  
+    // Hae suosituimmat keskustelut API:sta
+    useEffect(() => {
+      fetch('http://localhost:3000/threads/popular')
+        .then(response => response.json())
+        .then(data => setSuositut(data))
+        .catch(error => console.error('Virhe haettaessa suosituimpia keskusteluja:', error));
+    }, []);
+  
     return (
-
-        <div className="keskustelupalsta">
-
-            <h2><img src={Icon} alt="Kuvake" className="section-icon" />Suosituimmat keskustelut</h2>
-
-
-            <div className="keskustelu-container">
-                {keskustelut.map((k) => (
-                    <Link to={`/keskustelu/${k.id}`} className="keskustelu-item" key={k.id}>
-                        <span>{k.otsikko}</span>
-                        <img src={ArrowIcon} alt="Avaa" />
-                    </Link>
-                ))}
-            </div>
-
-
-
-
+      <div className="keskustelupalsta">
+        <h2><img src={Icon} alt="Kuvake" className="section-icon" />Suosituimmat keskustelut</h2>
+  
+        <div className="keskustelu-container">
+          {suositut.map((k) => (
+            <Link to={`/keskustelu/${k.id}`} className="keskustelu-item" key={k.id}>
+              <span>{k.title}</span>
+              <img src={ArrowIcon} alt="Avaa" />
+            </Link>
+          ))}
         </div>
-    )
-
-}
+      </div>
+    );
+  };
+  
 
 export default Suositkeskustelu;
