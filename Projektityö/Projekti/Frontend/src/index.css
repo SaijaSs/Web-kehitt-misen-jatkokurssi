@@ -40,6 +40,7 @@ body {
   width: 156px; /* Leveys */
   height: 32px; /* Korkeus */
   text-align: center; /* Keskittää tekstin */
+  text-decoration: none;
 }
 
 /* Hover-efekti */

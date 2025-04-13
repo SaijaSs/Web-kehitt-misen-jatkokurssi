@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Karuselli.css'
 import Icon from '../assets/images/Jewel.png';
 
@@ -23,7 +24,8 @@ const Karuselli = () => {
           {suosituimmat.map((keskustelu) => (
             <div className="book-card" key={keskustelu.id}>
               <h3>{keskustelu.title}</h3>  {/* Dynaaminen otsikko suosituista keskusteluista */}
-              <button className="btn">Lue lisää</button>
+              <Link to={`/keskustelu/${keskustelu.id}`} className="btn">Lue lisää</Link>
+
             </div>
           ))}
         </div>

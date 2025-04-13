@@ -87,6 +87,8 @@ app.get('/threads/popular', (req, res) => {
 app.get('/threads/:id', (req, res) => {
   const { id } = req.params;
 
+  console.log("Hakemassa keskustelua ID:llä:", id); // Lisää tämä rivi
+
   db.get('SELECT * FROM threads WHERE id = ?', [id], (err, thread) => {
     if (err) {
       return console.error(err.message);
@@ -126,5 +128,18 @@ app.post('/threads/:id/comments', (req, res) => {
       return console.error(err.message);
     }
     res.status(201).json({ id: this.lastID, thread_id: id, content });
+  });
+});
+
+// Hae kommentit tietyltä keskustelulta
+app.get('/threads/:id/comments', (req, res) => {
+  const { id } = req.params;
+
+  // Hae kommentit keskustelulle
+  db.all('SELECT * FROM comments WHERE thread_id = ? ORDER BY created_at DESC', [id], (err, comments) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    res.json(comments);  // Palautetaan kommentit
   });
 });

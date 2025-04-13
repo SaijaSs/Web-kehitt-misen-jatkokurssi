@@ -1,7 +1,11 @@
+
+
 .footer {
     display: flex;
     align-items: flex-start; /* Varmistaa, että kuva ja teksti ovat vertikaalisesti keskitettyjä */
     padding: 20px; /* Lisää hieman väliä ympärille */
+    border-top: 2px solid #e1e1e1; /* Alarajaviiva */
+    
 }
 
 .kuva {

@@ -23,9 +23,10 @@ const Uusimkeskustelu = () => {
   
         <div className="keskustelu-container">
           {keskustelut.map((k) => (
-            <div key={k.id} className="keskustelu-item">
-              <span>{k.title}</span>
-            </div>
+        <Link to={`/keskustelu/${k.id}`} className="keskustelu-item" key={k.id}>
+                      <span>{k.title}</span>
+                      <img src={ArrowIcon} alt="Avaa" />
+                    </Link>
           ))}
         </div>
       </div>

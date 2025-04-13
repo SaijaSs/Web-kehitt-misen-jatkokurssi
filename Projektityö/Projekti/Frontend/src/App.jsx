@@ -7,6 +7,9 @@ import Uusimmat from './pages/Uusimmat';
 import Kaikki from './pages/Kaikki';
 import Aloitakeskustelu from './pages/Aloitakeskustelu';
 import Meista from './pages/Meista';
+import Keskustelusivu from './pages/Keskustelusivu';
+
+
 
 
 function App() {
@@ -14,20 +17,22 @@ function App() {
 
   return (
     <Router>
-    <div>
-      {/* Reititykset */}
-      <Routes>
-        {/* Etusivu */}
-        <Route path="/" element={<Homepage />} />
-        <Route path="/Suosituimmat" element={<Suosituimmat />} /> 
-        <Route path="/Uusimmat" element={<Uusimmat />} /> 
-        <Route path="/Kaikki" element={<Kaikki />} /> 
-        <Route path="/Aloitakeskustelu" element={<Aloitakeskustelu />} />
-        <Route path="/Meista" element={<Meista />} />  
-   
+      <div>
+        {/* Reititykset */}
+        <Routes>
+          {/* Etusivu */}
+          <Route path="/" element={<Homepage />} />
+          <Route path="/Suosituimmat" element={<Suosituimmat />} />
+          <Route path="/Uusimmat" element={<Uusimmat />} />
+          <Route path="/Kaikki" element={<Kaikki />} />
+          <Route path="/Aloitakeskustelu" element={<Aloitakeskustelu />} />
+          <Route path="/Meista" element={<Meista />} />
+          {/* Keskustelusivulle reitti */}
+          <Route path="/keskustelu/:id" element={<Keskustelusivu />} /> {/* Tämä vie yksittäiseen keskusteluun */}
+        
       </Routes>
     </div>
-  </Router>
+  </Router >
   )
 }
 

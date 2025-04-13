@@ -24,6 +24,7 @@
 /* Kirjakortin tyyli */
 .book-card {
     min-width: 30%; /* Kortin minimileveys on 30% (kolme korttia mahtuu näytölle) */
+    height: 200px;
     flex-shrink: 0; /* Ei kutistu */
     background-color: #fff;
     border-radius: 8px;
@@ -31,6 +32,7 @@
     padding: 15px;
     text-align: center;
     transition: transform 0.3s ease-in-out; /* Lisätty animaatio efektin luomiseksi */
+   align-content: center;
 }
 
 /* Kirjakortin hover-efekti (kortti hieman nousee, kun sitä hoveroidaan) */

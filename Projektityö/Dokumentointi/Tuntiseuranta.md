@@ -18,4 +18,6 @@ Used time: 12 h 15 min
 |4.4.25| 3 h|Reactin aloittaminen | luotu komponentteja ja tyylisivuja |
 |7.4.25 | 5 h | Reactin uudelleenaloitus, etusivu | Luotu yleiset muotoilut ja etusivu komponentteineen ja komponenttikohtaiset tyylisivut |
 |8.4.25. | 4 h 25 min | Sivujen ja tyylien luomista | Suosituimmat, Uusimmat, Aloita keskustelu, Meistä sivut valmiit muotoiluineen| 
-|12.4.25| 2 h   | Backendin aloittaminen, tietokannan ja API:n luonti | Tietokanta luotu, luotu server.js, api.jsx ja API-pyynnöt komponentteihin |
+|12.4.25| 2 h | Backendin aloittaminen, tietokannan ja API:n luonti | Tietokanta luotu, luotu server.js, api.jsx ja API-pyynnöt komponentteihin |
+|12.4.25| 2 h | Backendin jatkaminen ja keskustelu-sivun luominen | Keskustelusivusto luotu ja kommenttitoimintoa rukattu |
+|13.4.25| 1 h 30 min| Keskustelusivun ja kommenttitoiminnan rakentaminen | Keskustelusivu ja kommenttitoiminto valmis, muotoilut tehty |

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createThread, addCommentToThread } from '../api/api'; // Tuodaan API-funktiot
+import { useNavigate } from 'react-router-dom'; // Tuodaan navigointi
 import '../styles/Aloita.css';
 
 const Aloita = () => {
@@ -9,6 +10,8 @@ const Aloita = () => {
     const [tarkastettu, setTarkastettu] = useState(false);
     const [loading, setLoading] = useState(false); // Ladataan tilaa
     const [error, setError] = useState(null); // Virhetilan hallinta
+
+    const navigate = useNavigate(); // Käytetään navigointiin
 
     // Lomakkeen lähetys
     const handleSubmit = async (e) => {
@@ -31,6 +34,9 @@ const Aloita = () => {
                 setAihe('');
                 setKomentti('');
                 setTarkastettu(false);
+
+                  // Ohjataan käyttäjä suoraan uuteen keskusteluun
+                  navigate(`/keskustelu/${newThread.id}`);  // Oletetaan, että URL on muodossa /keskustelu/:id
 
             } catch (error) {
                 console.error('Virhe keskustelua lisättäessä:', error);
