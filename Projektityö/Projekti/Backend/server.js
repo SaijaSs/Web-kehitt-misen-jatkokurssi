@@ -4,14 +4,14 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const port = process.env.PORT || 3000;
 
-
-
-// Jos haluat rajoittaa pyyntöjen lähteet, käytä tätä vaihtoehtoa
+// CORS middleware: salli vain tietty frontend
 app.use(cors({
-    origin: 'https://red-pond-0ce91a710.6.azurestaticapps.net',  // Frontendin osoite
- }));
+  origin: 'https://red-pond-0ce91a710.6.azurestaticapps.net',  // Frontendin osoite
+  methods: ['GET', 'POST'],  // Sallitut HTTP-menetelmät
+  allowedHeaders: ['Content-Type'], // Sallitut otsikot
+}));
 
-// Middleware
+// Middleware JSON:lle
 app.use(express.json());
 
 // SQLite3-tietokannan määrittely
@@ -55,16 +55,15 @@ db.serialize(() => {
   `);
 });
 
-
 // Hae kaikki keskustelut (uusimmat ensin)
 app.get('/threads', (req, res) => {
-    db.all('SELECT * FROM threads ORDER BY created_at DESC', [], (err, rows) => {
-      if (err) {
-        return console.error(err.message);
-      }
-      res.json(rows);  // Palautetaan keskustelut aikajärjestyksessä uusimmat ensin
-    });
+  db.all('SELECT * FROM threads ORDER BY created_at DESC', [], (err, rows) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    res.json(rows);  // Palautetaan keskustelut aikajärjestyksessä uusimmat ensin
   });
+});
 
 // Hae suosituimmat keskustelut (eniten kommentteja)
 app.get('/threads/popular', (req, res) => {

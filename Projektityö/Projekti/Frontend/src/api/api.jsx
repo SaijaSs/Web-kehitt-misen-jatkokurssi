@@ -1,5 +1,5 @@
 // api.jsx
-const BASE_URL = 'https//projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net'; // Backendin osoite
+const BASE_URL = 'https://projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net'; // Backendin osoite
 
 // Hae kaikki keskustelut (uusimmat)
 export const getThreads = async () => {
