@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors'); 
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
+const port = process.env.PORT || 3000;
+
+
 
 // Jos haluat rajoittaa pyyntöjen lähteet, käytä tätä vaihtoehtoa
 app.use(cors({
