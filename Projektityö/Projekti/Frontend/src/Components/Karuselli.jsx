@@ -9,7 +9,7 @@ const Karuselli = () => {
   
     // Hae suosituimmat keskustelut API:sta
     useEffect(() => {
-      fetch('projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/popular')  // Hae suosituimmat keskustelut
+      fetch('https://projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/popular')  // Hae suosituimmat keskustelut
         .then(response => response.json())
         .then(data => setSuosituimmat(data))
         .catch(error => console.error('Virhe haettaessa suosituimpia keskusteluja:', error));

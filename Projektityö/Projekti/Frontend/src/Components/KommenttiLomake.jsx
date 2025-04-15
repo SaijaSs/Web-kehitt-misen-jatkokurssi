@@ -8,7 +8,7 @@ const KommenttiLomake = ({ id, setKommentit }) => {
         if (!uusiKommentti.trim()) return;
 
         try {
-            const res = await fetch(`projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/${id}/comments`, {
+            const res = await fetch(`https://projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/${id}/comments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

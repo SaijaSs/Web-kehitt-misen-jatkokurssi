@@ -9,7 +9,7 @@ const Uusimkeskustelu = () => {
   
     // Hae uusimmat keskustelut API:sta (vain 5 uusinta)
     useEffect(() => {
-      fetch('projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads')
+      fetch('https://projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads')
         .then((response) => response.json())
         .then((data) => setKeskustelut(data.slice(0, 5))) // Näytetään vain 5 uusinta
         .catch((error) => console.error('Virhe haettaessa keskusteluja:', error));
