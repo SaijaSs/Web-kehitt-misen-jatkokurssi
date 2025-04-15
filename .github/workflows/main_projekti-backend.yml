@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # This is required for actions/checkout
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
@@ -22,21 +22,21 @@ jobs:
 
       - name: Install dependencies and build backend
         run: |
-          cd Projektityö/Projekti/Backend
+          cd ../Projektityö/Projekti/Backend
           npm install
           npm run build --if-present
           npm run test --if-present
 
       - name: Zip artifact for deployment
         run: |
-          cd Projektityö/Projekti/Backend
+          cd ../Projektityö/Projekti/Backend
           zip -r release.zip . # Tämä ottaa mukaan myös database.db
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: Projektityö/Projekti/Backend/release.zip
+          path: ../Projektityö/Projekti/Backend/release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -60,9 +60,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7697D34EA8254AD9B02900DB509CC885 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DA8C80DA56FF4E1DB86ACFBE179A30DF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E18BC86D932E4B8B90076A0D01CAFF46 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_... }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_... }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_... }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -71,11 +71,3 @@ jobs:
           app-name: 'projekti-backend'
           slot-name: 'Production'
           package: .
-          
-      - name: Verify SQLite database is in place
-        run: |
-          echo "Verifying database is in place..."
-          ls /home/site/wwwroot/database.db  # Tämä tarkistaa, onko SQLite-tietokanta oikeassa paikassa
-          if [ ! -f /home/site/wwwroot/database.db ]; then
-            echo "Database file not found, uploading..."
-            cp ./Projektityö/Projekti
