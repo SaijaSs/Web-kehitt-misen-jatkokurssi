@@ -16,7 +16,7 @@ const Kaikkikeskustelut = () => {
   
     // Hae kaikki keskustelut API:sta
     useEffect(() => {
-      fetch('http://localhost:3000/threads')
+      fetch('projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads')
         .then((response) => response.json())
         .then((data) => setKeskustelut(data))
         .catch((error) => console.error('Virhe haettaessa keskusteluja:', error));

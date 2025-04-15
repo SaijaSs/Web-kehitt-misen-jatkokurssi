@@ -15,7 +15,7 @@ const Keskustelu = () => {
     useEffect(() => {
         const haeKeskustelu = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/threads/${id}`);
+                const res = await fetch(`projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/${id}`);
                 const data = await res.json();
                 console.log("Keskustelu data:", data); // Lisää tämä rivi
                 if (!data || !data.thread) {
@@ -30,7 +30,7 @@ const Keskustelu = () => {
 
         const haeKommentit = async () => {
             try {
-                const res2 = await fetch(`http://localhost:3000/threads/${id}/comments`);
+                const res2 = await fetch(`projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/${id}/comments`);
                 const data2 = await res2.json();
                 console.log("Kommentit data:", data2); // Lisää tämä rivi
                 setKommentit(data2);

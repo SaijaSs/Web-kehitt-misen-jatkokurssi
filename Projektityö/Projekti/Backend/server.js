@@ -2,11 +2,10 @@ const express = require('express');
 const cors = require('cors'); 
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
-const port = 3000;
 
 // Jos haluat rajoittaa pyyntöjen lähteet, käytä tätä vaihtoehtoa
 app.use(cors({
-    origin: 'http://localhost:5173',  // Frontendin osoite
+    origin: 'https://red-pond-0ce91a710.6.azurestaticapps.net',  // Frontendin osoite
  }));
 
 // Middleware

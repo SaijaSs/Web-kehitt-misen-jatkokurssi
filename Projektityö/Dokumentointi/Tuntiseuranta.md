@@ -23,3 +23,4 @@ Used time: 12 h 15 min
 |13.4.25| 1 h 30 min| Keskustelusivun ja kommenttitoiminnan rakentaminen | Keskustelusivu ja kommenttitoiminto valmis, muotoilut tehty |
 |14.4.25| 3 h 30 min | Raportin ja testauksen aloitus | Raportista valmiina osia ja Aloita.test.jsx valmis |
 |15.4.25| 2 h 40 min | Testauksen rakentamista | Unit-testaus valmis ja E2E-testaus valmis |
+|15.4.25| 15 - |
