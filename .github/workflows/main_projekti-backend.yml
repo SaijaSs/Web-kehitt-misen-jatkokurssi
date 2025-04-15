@@ -22,21 +22,21 @@ jobs:
 
       - name: Install dependencies and build backend
         run: |
-          cd ../Projektityö/Projekti/Backend
+          cd /home/runner/work/Web-kehitt-misen-jatkokurssi/Projektityö/Projekti/Backend
           npm install
           npm run build --if-present
           npm run test --if-present
 
       - name: Zip artifact for deployment
         run: |
-          cd ../Projektityö/Projekti/Backend
+          cd /home/runner/work/Web-kehitt-misen-jatkokurssi/Projektityö/Projekti/Backend
           zip -r release.zip . # Tämä ottaa mukaan myös database.db
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ../Projektityö/Projekti/Backend/release.zip
+          path: /home/runner/work/Web-kehitt-misen-jatkokurssi/Projektityö/Projekti/Backend/release.zip
 
   deploy:
     runs-on: ubuntu-latest
