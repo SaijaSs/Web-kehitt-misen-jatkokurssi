@@ -114,6 +114,7 @@ app.post('/threads', (req, res) => {
     if (err) {
       return console.error(err.message);
     }
+    
     res.status(201).json({ id: this.lastID, title, content });
   });
 });
