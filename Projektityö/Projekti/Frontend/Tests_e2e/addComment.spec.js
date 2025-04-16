@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('Käyttäjä voi lisätä kommentin keskusteluun', async ({ page }) => {
   // 1. Mene keskustelujen listaan, esim. "Kaikki keskustelut" -sivulle
-  await page.goto('http://localhost:5173/kaikki'); // Muokkaa oikea URL
+  await page.goto('https://red-pond-0ce91a710.6.azurestaticapps.net/kaikki'); // Muokkaa oikea URL
 
   // 2. Valitse keskustelu listalta, esim. ensimmäinen keskustelu
   const ekaKeskustelu = page.locator('.keskustelu-item').first();  // Etsi ensimmäinen keskustelu

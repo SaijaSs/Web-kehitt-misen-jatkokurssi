@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('Käyttäjä voi selata keskusteluja Kaikki-sivulla', async ({ page }) => {
   // 1. Siirry Kaikki keskustelut -sivulle
-  await page.goto('http://localhost:5173/kaikki'); // Muuta URL tarvittaessa
+  await page.goto('https://red-pond-0ce91a710.6.azurestaticapps.net/kaikki'); // Muuta URL tarvittaessa
 
   // 2. Odota, että ainakin yksi keskustelu-item näkyy
   const keskusteluItem = page.locator('.keskustelu-item');  // Etsitään keskusteluitemeitä

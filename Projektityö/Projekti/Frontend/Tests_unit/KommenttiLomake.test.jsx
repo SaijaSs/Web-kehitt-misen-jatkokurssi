@@ -41,7 +41,7 @@ describe('KommenttiLomake-komponentti', () => {
 
     // Varmistetaan että fetch-kutsu lähetettiin oikealla URLilla
     expect(global.fetch).toHaveBeenCalledWith(
-      'http://localhost:3000/threads/123/comments',
+      'https://projekti-backend-ezg5g3cwengphuby.centralus-01.azurewebsites.net/threads/123/comments',
       expect.objectContaining({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

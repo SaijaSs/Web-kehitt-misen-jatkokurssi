@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Käyttäjä voi luoda uuden keskustelun', async ({ page }) => {
-  await page.goto('http://localhost:5173');
+  await page.goto('https://red-pond-0ce91a710.6.azurestaticapps.net');
 
   // Klikkaa "Uusi keskustelu" -nappia
   const aloitaButton = page.getByRole('button', { name: 'Uusi keskustelu' });
