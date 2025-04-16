@@ -23,4 +23,7 @@ Used time: 12 h 15 min
 |13.4.25| 1 h 30 min| Keskustelusivun ja kommenttitoiminnan rakentaminen | Keskustelusivu ja kommenttitoiminto valmis, muotoilut tehty |
 |14.4.25| 3 h 30 min | Raportin ja testauksen aloitus | Raportista valmiina osia ja Aloita.test.jsx valmis |
 |15.4.25| 2 h 40 min | Testauksen rakentamista | Unit-testaus valmis ja E2E-testaus valmis |
-|15.4.25| 15 - |
+|15.4.25| 4 h 30 min | Ympäristön rakentamista | Static Web App luotu frontendille, Backendiä yritetty rakentaa App servicelle, vielä kesken |
+|16.4.25| 4 h | Ympäritön rakentamista ja raportin kirjoittaminen | App servicelle saatu backend deployattua ja toimintaan, raportti valmis |
+
+Used time: 32 h 50 min
