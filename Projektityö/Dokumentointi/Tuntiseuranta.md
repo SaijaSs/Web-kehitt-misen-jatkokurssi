@@ -27,3 +27,11 @@ Used time: 12 h 15 min
 |16.4.25| 4 h | Ympäritön rakentamista ja raportin kirjoittaminen | App servicelle saatu backend deployattua ja toimintaan, raportti valmis |
 
 Used time: 32 h 50 min
+
+**VAIHE 4**
+| Date   | Used time | Subject                | Outcome |
+|:--------|:-----------:|:------------------------:|---------:|
+|23.4.25| 4 h 15 min 16 - |Dokumentoinnin aloitus| Dokumentointi valmis |
+|24.4.25| 2 h | Dokumentoinnin viimeistely, esittelyvideon kuvaus ja lisäys | Raportti valmis |
+
+Used time: 6 h 15 min
